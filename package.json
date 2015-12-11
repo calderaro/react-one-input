@@ -1,11 +1,11 @@
 {
-  "name": "material-layout",
-  "version": "1.0.5",
-  "description": "",
+  "name": "react-one-input",
+  "version": "1.0.0",
+  "description": "one input to rule them all",
   "main": "dist/app.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/calderaro/material-layout.git"
+    "url": "https://github.com/calderaro/react-one-input.git"
   },
   "scripts": {
     "build": "TARGET=build ./node_modules/.bin/webpack",
