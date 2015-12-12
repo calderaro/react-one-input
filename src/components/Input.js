@@ -11,6 +11,14 @@ export default React.createClass({
       placeholder: "",
       label: "",
       type: "text",
+      style: {},
+    };
+  },
+  getStyle(){
+    return {
+      input: {
+        ...this.props.style,
+      },
     };
   },
   render() {

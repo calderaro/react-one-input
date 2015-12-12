@@ -5,13 +5,13 @@ webpackJsonp([1],{
 
 	"use strict";
 
-	var _react = __webpack_require__(52);
+	var _react = __webpack_require__(34);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactDom = __webpack_require__(59);
+	var _reactDom = __webpack_require__(62);
 
-	var _Input = __webpack_require__(88);
+	var _Input = __webpack_require__(101);
 
 	var _Input2 = _interopRequireDefault(_Input);
 
@@ -55,309 +55,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 88:
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(52);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _Search = __webpack_require__(89);
-
-	var _Search2 = _interopRequireDefault(_Search);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = _react2.default.createClass({
-	  displayName: "Input",
-	  getDefaultProps: function getDefaultProps() {
-	    return {
-	      result: {},
-	      api: "",
-	      name: "name",
-	      value: "",
-	      placeholder: "",
-	      label: "",
-	      type: "text"
-	    };
-	  },
-	  render: function render() {
-	    var _props = this.props;
-	    var name = _props.name;
-	    var id = _props.id;
-	    var placeholder = _props.placeholder;
-	    var type = _props.type;
-	    var value = _props.value;
-	    var onChange = _props.onChange;
-	    var onKeyPress = _props.onKeyPress;
-	    var result = _props.result;
-	    var api = _props.api;
-	    var field = _props.field;
-	    var ref = _props.ref;
-
-	    var capital = (name || "name").charAt(0).toUpperCase() + (name || "name").substr(1).toLowerCase();
-
-	    if (type === "text") return _react2.default.createElement(
-	      "div",
-	      { className: "form-group" },
-	      _react2.default.createElement(
-	        "label",
-	        { htmlFor: name },
-	        placeholder
-	      ),
-	      _react2.default.createElement("input", {
-	        type: "text",
-	        id: id || name,
-	        className: "form-control",
-	        placeholder: placeholder,
-	        value: value,
-	        onKeyPress: onKeyPress,
-	        onChange: onChange }),
-	      _react2.default.createElement(
-	        "span",
-	        { style: { color: "#FE2E2E" } },
-	        result[this.props.name]
-	      )
-	    );
-
-	    if (type === "number") return _react2.default.createElement(
-	      "div",
-	      { className: "form-group" },
-	      _react2.default.createElement(
-	        "label",
-	        { htmlFor: name },
-	        placeholder
-	      ),
-	      _react2.default.createElement("input", {
-	        type: "text",
-	        id: id || name,
-	        className: "form-control",
-	        placeholder: placeholder,
-	        value: value,
-	        onKeyPress: onKeyPress,
-	        onChange: onChange }),
-	      _react2.default.createElement(
-	        "span",
-	        { style: { color: "#FE2E2E" } },
-	        result[this.props.name]
-	      )
-	    );
-
-	    if (type === "search") return _react2.default.createElement(
-	      "div",
-	      { className: "form-group" },
-	      _react2.default.createElement(
-	        "label",
-	        { htmlFor: name },
-	        placeholder
-	      ),
-	      _react2.default.createElement(_Search2.default, {
-	        id: id || name,
-	        placeholder: placeholder,
-	        value: value,
-	        api: api || name,
-	        field: field || name,
-	        onKeyPress: onKeyPress,
-	        ch: onChange }),
-	      _react2.default.createElement(
-	        "span",
-	        { style: { color: "#FE2E2E" } },
-	        result[this.props.name]
-	      )
-	    );
-
-	    if (type === "checkbox") return _react2.default.createElement(
-	      "div",
-	      { className: "checkbox" },
-	      _react2.default.createElement(
-	        "label",
-	        null,
-	        _react2.default.createElement("input", { type: "checkbox", onKeyPress: onKeyPress, onChange: onChange, checked: value, id: id || name }),
-	        placeholder
-	      )
-	    );
-
-	    if (type === "textarea") return _react2.default.createElement(
-	      "div",
-	      { className: "form-group" },
-	      _react2.default.createElement(
-	        "label",
-	        { htmlFor: name },
-	        placeholder
-	      ),
-	      _react2.default.createElement("textarea", { id: id || name, className: "form-control", value: value, onKeyPress: onKeyPress, onChange: onChange,
-	        placeholder: placeholder, rows: "3" }),
-	      _react2.default.createElement(
-	        "span",
-	        { style: { color: "#FE2E2E" } },
-	        result[this.props.name]
-	      )
-	    );
-
-	    if (type === "file") return _react2.default.createElement(
-	      "div",
-	      { className: "form-group" },
-	      placeholder ? _react2.default.createElement(
-	        "label",
-	        { htmlFor: name },
-	        placeholder
-	      ) : null,
-	      _react2.default.createElement("input", { type: "file", id: id || name, ref: ref, className: "form-control", accept: ".jpg",
-	        placeholder: "Image", value: value, onKeyPress: onKeyPress, onChange: onChange }),
-	      _react2.default.createElement(
-	        "span",
-	        { style: { color: "#FE2E2E" } },
-	        result[this.props.name]
-	      )
-	    );
-	  }
-	});
-
-/***/ },
-
-/***/ 89:
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(52);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _services = __webpack_require__(174);
-
-	var _services2 = _interopRequireDefault(_services);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = _react2.default.createClass({
-	  displayName: "Search",
-	  getInitialState: function getInitialState() {
-	    return {
-	      isfocused: false,
-	      items: []
-	    };
-	  },
-	  style: function style() {
-
-	    var defaultStyle = {
-	      input: {},
-	      ul: {
-	        display: "block",
-	        position: "absolute",
-	        zIndex: "100",
-	        background: "#FFF",
-	        margin: "0",
-	        padding: 0,
-	        borderLeft: "1px solid gray",
-	        borderRight: "1px solid gray",
-	        borderBottom: "1px solid gray"
-	      },
-	      li: { listStyle: "none", margin: "0", padding: "8px" }
-	    };
-
-	    if (!this.refs.input) return defaultStyle;
-	    defaultStyle.ul.width = this.refs.input.offsetWidth;
-	    return defaultStyle;
-	  },
-	  componentWillMount: function componentWillMount() {
-	    var _this = this;
-
-	    if (!this.props.value) return;
-	    (0, _services2.default)(this.props.api).read(this.props.value).then(function (res) {
-	      _this.setState({ items: [res.data] });
-	      _this.refs.input.value = res.data[_this.props.field || "name"];
-	    }).catch(function (err) {
-	      return console.log(err);
-	    });
-	  },
-	  onChange: function onChange(e) {
-	    var _this2 = this;
-
-	    (0, _services2.default)(this.props.api).read("", { search: e.target.value }).then(function (res) {
-	      return _this2.setState({ isfocused: true, items: res.data }, _this2.check());
-	    }).catch(function (err) {
-	      return console.log(err);
-	    });
-	  },
-	  focus: function focus(e) {
-	    this.setState({ isfocused: true });
-	  },
-	  defocus: function defocus(e) {
-	    var _this3 = this;
-
-	    setTimeout(function () {
-	      if (!_this3.isMounted()) return; //avoid undefined input error caused by timeout
-	      _this3.setState({ isfocused: false }, _this3.check());
-	    }, 300);
-	  },
-	  select: function select(item) {
-	    this.refs.input.value = item[this.props.field || "name"];
-	    this.setState({ isfocused: false }, this.check());
-	  },
-	  check: function check() {
-	    var _this4 = this;
-
-	    var item = this.state.items.filter(function (item) {
-	      return item[_this4.props.field || "name"].toUpperCase() === _this4.refs.input.value.toUpperCase();
-	    });
-	    this.props.ch({ target: { id: this.props.id, value: item.length ? item[0].id : "" } }, item[0]);
-	  },
-	  render: function render() {
-	    var _this5 = this;
-
-	    var _state = this.state;
-	    var isfocused = _state.isfocused;
-	    var items = _state.items;
-
-	    var style = this.style();
-	    style.ul.display = isfocused && items.length ? "block" : "none";
-
-	    return _react2.default.createElement(
-	      "div",
-	      { onClick: function onClick(e) {
-	          return e.stopPropagation();
-	        } },
-	      _react2.default.createElement("input", {
-	        type: "text",
-	        id: this.props.id,
-	        name: this.props.name,
-	        className: "form-control",
-	        placeholder: this.props.placeholder,
-	        onChange: this.onChange,
-	        onFocus: this.focus,
-	        onBlur: this.defocus,
-	        onKeyPress: this.props.onKeyPress,
-	        autoComplete: "off",
-	        ref: "input" }),
-	      _react2.default.createElement(
-	        "ul",
-	        { style: style.ul },
-	        items.map(function (item) {
-	          return _react2.default.createElement(
-	            "li",
-	            { key: item.id, onClick: _this5.select.bind(_this5, item), style: style.li },
-	            item[_this5.props.field || "name"]
-	          );
-	        })
-	      )
-	    );
-	  }
-	});
-
-/***/ },
-
-/***/ 161:
+/***/ 11:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -613,18 +311,18 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 162:
+/***/ 54:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	/*global ActiveXObject:true*/
 
-	var defaults = __webpack_require__(163);
-	var utils = __webpack_require__(161);
-	var buildUrl = __webpack_require__(168);
-	var parseHeaders = __webpack_require__(170);
-	var transformData = __webpack_require__(172);
+	var defaults = __webpack_require__(55);
+	var utils = __webpack_require__(11);
+	var buildUrl = __webpack_require__(95);
+	var parseHeaders = __webpack_require__(97);
+	var transformData = __webpack_require__(99);
 
 	module.exports = function xhrAdapter(resolve, reject, config) {
 	  // Transform request data
@@ -684,8 +382,8 @@ webpackJsonp([1],{
 	  // This is only done if running in a standard browser environment.
 	  // Specifically not if we're in a web worker, or react-native.
 	  if (utils.isStandardBrowserEnv()) {
-	    var cookies = __webpack_require__(169);
-	    var urlIsSameOrigin = __webpack_require__(173);
+	    var cookies = __webpack_require__(96);
+	    var urlIsSameOrigin = __webpack_require__(100);
 
 	    // Add xsrf header
 	    var xsrfValue = urlIsSameOrigin(config.url) ?
@@ -736,12 +434,12 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 163:
+/***/ 55:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(161);
+	var utils = __webpack_require__(11);
 
 	var PROTECTION_PREFIX = /^\)\]\}',?\n/;
 	var DEFAULT_CONTENT_TYPE = {
@@ -805,22 +503,22 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 164:
+/***/ 91:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(165);
+	module.exports = __webpack_require__(92);
 
 /***/ },
 
-/***/ 165:
+/***/ 92:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var defaults = __webpack_require__(163);
-	var utils = __webpack_require__(161);
-	var dispatchRequest = __webpack_require__(167);
-	var InterceptorManager = __webpack_require__(166);
+	var defaults = __webpack_require__(55);
+	var utils = __webpack_require__(11);
+	var dispatchRequest = __webpack_require__(94);
+	var InterceptorManager = __webpack_require__(93);
 
 	var axios = module.exports = function (config) {
 	  // Allow for axios('example/url'[, config]) a la fetch API
@@ -867,7 +565,7 @@ webpackJsonp([1],{
 	axios.all = function (promises) {
 	  return Promise.all(promises);
 	};
-	axios.spread = __webpack_require__(171);
+	axios.spread = __webpack_require__(98);
 
 	// Expose interceptors
 	axios.interceptors = {
@@ -907,12 +605,12 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 166:
+/***/ 93:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(161);
+	var utils = __webpack_require__(11);
 
 	function InterceptorManager() {
 	  this.handlers = [];
@@ -966,7 +664,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 167:
+/***/ 94:
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -983,11 +681,11 @@ webpackJsonp([1],{
 	    try {
 	      // For browsers use XHR adapter
 	      if ((typeof XMLHttpRequest !== 'undefined') || (typeof ActiveXObject !== 'undefined')) {
-	        __webpack_require__(162)(resolve, reject, config);
+	        __webpack_require__(54)(resolve, reject, config);
 	      }
 	      // For node use HTTP adapter
 	      else if (typeof process !== 'undefined') {
-	        __webpack_require__(162)(resolve, reject, config);
+	        __webpack_require__(54)(resolve, reject, config);
 	      }
 	    } catch (e) {
 	      reject(e);
@@ -1000,12 +698,12 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 168:
+/***/ 95:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(161);
+	var utils = __webpack_require__(11);
 
 	function encode(val) {
 	  return encodeURIComponent(val).
@@ -1066,7 +764,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 169:
+/***/ 96:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1077,7 +775,7 @@ webpackJsonp([1],{
 	 *  Please see lib/utils.isStandardBrowserEnv before including this file.
 	 */
 
-	var utils = __webpack_require__(161);
+	var utils = __webpack_require__(11);
 
 	module.exports = {
 	  write: function write(name, value, expires, path, domain, secure) {
@@ -1116,12 +814,12 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 170:
+/***/ 97:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(161);
+	var utils = __webpack_require__(11);
 
 	/**
 	 * Parse headers into an object
@@ -1157,7 +855,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 171:
+/***/ 98:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1191,12 +889,12 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 172:
+/***/ 99:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(161);
+	var utils = __webpack_require__(11);
 
 	/**
 	 * Transform the data for a request or a response
@@ -1217,7 +915,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 173:
+/***/ 100:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1228,7 +926,7 @@ webpackJsonp([1],{
 	 *  Please see lib/utils.isStandardBrowserEnv before including this file.
 	 */
 
-	var utils = __webpack_require__(161);
+	var utils = __webpack_require__(11);
 	var msie = /(msie|trident)/i.test(navigator.userAgent);
 	var urlParsingNode = document.createElement('a');
 	var originUrl;
@@ -1282,7 +980,317 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 174:
+/***/ 101:
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(34);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Search = __webpack_require__(102);
+
+	var _Search2 = _interopRequireDefault(_Search);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _react2.default.createClass({
+	  displayName: "Input",
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      result: {},
+	      api: "",
+	      name: "name",
+	      value: "",
+	      placeholder: "",
+	      label: "",
+	      type: "text",
+	      style: {}
+	    };
+	  },
+	  getStyle: function getStyle() {
+	    return {
+	      input: _extends({}, this.props.style)
+	    };
+	  },
+	  render: function render() {
+	    var _props = this.props;
+	    var name = _props.name;
+	    var id = _props.id;
+	    var placeholder = _props.placeholder;
+	    var type = _props.type;
+	    var value = _props.value;
+	    var onChange = _props.onChange;
+	    var onKeyPress = _props.onKeyPress;
+	    var result = _props.result;
+	    var api = _props.api;
+	    var field = _props.field;
+	    var ref = _props.ref;
+
+	    var capital = (name || "name").charAt(0).toUpperCase() + (name || "name").substr(1).toLowerCase();
+
+	    if (type === "text") return _react2.default.createElement(
+	      "div",
+	      { className: "form-group" },
+	      _react2.default.createElement(
+	        "label",
+	        { htmlFor: name },
+	        placeholder
+	      ),
+	      _react2.default.createElement("input", {
+	        type: "text",
+	        id: id || name,
+	        className: "form-control",
+	        placeholder: placeholder,
+	        value: value,
+	        onKeyPress: onKeyPress,
+	        onChange: onChange }),
+	      _react2.default.createElement(
+	        "span",
+	        { style: { color: "#FE2E2E" } },
+	        result[this.props.name]
+	      )
+	    );
+
+	    if (type === "number") return _react2.default.createElement(
+	      "div",
+	      { className: "form-group" },
+	      _react2.default.createElement(
+	        "label",
+	        { htmlFor: name },
+	        placeholder
+	      ),
+	      _react2.default.createElement("input", {
+	        type: "text",
+	        id: id || name,
+	        className: "form-control",
+	        placeholder: placeholder,
+	        value: value,
+	        onKeyPress: onKeyPress,
+	        onChange: onChange }),
+	      _react2.default.createElement(
+	        "span",
+	        { style: { color: "#FE2E2E" } },
+	        result[this.props.name]
+	      )
+	    );
+
+	    if (type === "search") return _react2.default.createElement(
+	      "div",
+	      { className: "form-group" },
+	      _react2.default.createElement(
+	        "label",
+	        { htmlFor: name },
+	        placeholder
+	      ),
+	      _react2.default.createElement(_Search2.default, {
+	        id: id || name,
+	        placeholder: placeholder,
+	        value: value,
+	        api: api || name,
+	        field: field || name,
+	        onKeyPress: onKeyPress,
+	        ch: onChange }),
+	      _react2.default.createElement(
+	        "span",
+	        { style: { color: "#FE2E2E" } },
+	        result[this.props.name]
+	      )
+	    );
+
+	    if (type === "checkbox") return _react2.default.createElement(
+	      "div",
+	      { className: "checkbox" },
+	      _react2.default.createElement(
+	        "label",
+	        null,
+	        _react2.default.createElement("input", { type: "checkbox", onKeyPress: onKeyPress, onChange: onChange, checked: value, id: id || name }),
+	        placeholder
+	      )
+	    );
+
+	    if (type === "textarea") return _react2.default.createElement(
+	      "div",
+	      { className: "form-group" },
+	      _react2.default.createElement(
+	        "label",
+	        { htmlFor: name },
+	        placeholder
+	      ),
+	      _react2.default.createElement("textarea", { id: id || name, className: "form-control", value: value, onKeyPress: onKeyPress, onChange: onChange,
+	        placeholder: placeholder, rows: "3" }),
+	      _react2.default.createElement(
+	        "span",
+	        { style: { color: "#FE2E2E" } },
+	        result[this.props.name]
+	      )
+	    );
+
+	    if (type === "file") return _react2.default.createElement(
+	      "div",
+	      { className: "form-group" },
+	      placeholder ? _react2.default.createElement(
+	        "label",
+	        { htmlFor: name },
+	        placeholder
+	      ) : null,
+	      _react2.default.createElement("input", { type: "file", id: id || name, ref: ref, className: "form-control", accept: ".jpg",
+	        placeholder: "Image", value: value, onKeyPress: onKeyPress, onChange: onChange }),
+	      _react2.default.createElement(
+	        "span",
+	        { style: { color: "#FE2E2E" } },
+	        result[this.props.name]
+	      )
+	    );
+	  }
+	});
+
+/***/ },
+
+/***/ 102:
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(34);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _services = __webpack_require__(103);
+
+	var _services2 = _interopRequireDefault(_services);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _react2.default.createClass({
+	  displayName: "Search",
+	  getInitialState: function getInitialState() {
+	    return {
+	      isfocused: false,
+	      items: []
+	    };
+	  },
+	  style: function style() {
+
+	    var defaultStyle = {
+	      input: {},
+	      ul: {
+	        display: "block",
+	        position: "absolute",
+	        zIndex: "100",
+	        background: "#FFF",
+	        margin: "0",
+	        padding: 0,
+	        borderLeft: "1px solid gray",
+	        borderRight: "1px solid gray",
+	        borderBottom: "1px solid gray"
+	      },
+	      li: { listStyle: "none", margin: "0", padding: "8px" }
+	    };
+
+	    if (!this.refs.input) return defaultStyle;
+	    defaultStyle.ul.width = this.refs.input.offsetWidth;
+	    return defaultStyle;
+	  },
+	  componentWillMount: function componentWillMount() {
+	    var _this = this;
+
+	    if (!this.props.value) return;
+	    (0, _services2.default)(this.props.api).read(this.props.value).then(function (res) {
+	      _this.setState({ items: [res.data] });
+	      _this.refs.input.value = res.data[_this.props.field || "name"];
+	    }).catch(function (err) {
+	      return console.log(err);
+	    });
+	  },
+	  onChange: function onChange(e) {
+	    var _this2 = this;
+
+	    (0, _services2.default)(this.props.api).read("", { search: e.target.value }).then(function (res) {
+	      return _this2.setState({ isfocused: true, items: res.data }, _this2.check());
+	    }).catch(function (err) {
+	      return console.log(err);
+	    });
+	  },
+	  focus: function focus(e) {
+	    this.setState({ isfocused: true });
+	  },
+	  defocus: function defocus(e) {
+	    var _this3 = this;
+
+	    setTimeout(function () {
+	      if (!_this3.isMounted()) return; //avoid undefined input error caused by timeout
+	      _this3.setState({ isfocused: false }, _this3.check());
+	    }, 300);
+	  },
+	  select: function select(item) {
+	    this.refs.input.value = item[this.props.field || "name"];
+	    this.setState({ isfocused: false }, this.check());
+	  },
+	  check: function check() {
+	    var _this4 = this;
+
+	    var item = this.state.items.filter(function (item) {
+	      return item[_this4.props.field || "name"].toUpperCase() === _this4.refs.input.value.toUpperCase();
+	    });
+	    this.props.ch({ target: { id: this.props.id, value: item.length ? item[0].id : "" } }, item[0]);
+	  },
+	  render: function render() {
+	    var _this5 = this;
+
+	    var _state = this.state;
+	    var isfocused = _state.isfocused;
+	    var items = _state.items;
+
+	    var style = this.style();
+	    style.ul.display = isfocused && items.length ? "block" : "none";
+
+	    return _react2.default.createElement(
+	      "div",
+	      { onClick: function onClick(e) {
+	          return e.stopPropagation();
+	        } },
+	      _react2.default.createElement("input", {
+	        type: "text",
+	        id: this.props.id,
+	        name: this.props.name,
+	        className: "form-control",
+	        placeholder: this.props.placeholder,
+	        onChange: this.onChange,
+	        onFocus: this.focus,
+	        onBlur: this.defocus,
+	        onKeyPress: this.props.onKeyPress,
+	        autoComplete: "off",
+	        ref: "input" }),
+	      _react2.default.createElement(
+	        "ul",
+	        { style: style.ul },
+	        items.map(function (item) {
+	          return _react2.default.createElement(
+	            "li",
+	            { key: item.id, onClick: _this5.select.bind(_this5, item), style: style.li },
+	            item[_this5.props.field || "name"]
+	          );
+	        })
+	      )
+	    );
+	  }
+	});
+
+/***/ },
+
+/***/ 103:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1344,7 +1352,7 @@ webpackJsonp([1],{
 	  };
 	};
 
-	var _axios = __webpack_require__(164);
+	var _axios = __webpack_require__(91);
 
 	var _axios2 = _interopRequireDefault(_axios);
 
