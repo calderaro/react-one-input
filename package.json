@@ -1,6 +1,6 @@
 {
   "name": "react-one-input",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "one input to rule them all",
   "main": "dist/app.js",
   "repository": {
